@@ -1,0 +1,371 @@
+@media (max-width:499px) {
+    body {
+        margin: 0px;
+        padding: 0px;
+        overflow: hidden;
+        background: rgb(240, 240, 240);
+        width: 100vw;
+        height:100vh;
+        font-family: sans-serif;
+    }
+
+    #hole-Background {
+        position:absolute;
+        width:100vw;
+        height:100vh;
+        background:rgb(240, 240, 240);
+    }
+
+    #all-Of-Sign-In {
+        display: flex;
+    }
+
+    #all-Of-Log-In {
+        display:none;
+    }
+
+    #signUpOrLogInText {
+        display: flex;
+        justify-content: center;
+        margin-top: -33px;
+    }
+
+    #sign-Up-Container {
+        width:75vw;
+        height:400px;
+        font-size: 25px;
+        margin-top: 50%;
+        color: rgb(150, 150, 150);
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #image-Holder {
+        width:75px;
+        position:absolute;
+        height:75px;
+        top:-90px;
+        left:50%;
+        transform: translate(-50%);
+        overflow: hidden;
+        border-radius: 100%;
+    }
+
+    #selected-Up-In {
+        width:100px;
+        height:35px;
+        margin-top:-31px;
+        border-radius: 15px;
+        margin-left:calc(50% - 95px);
+        background:#ffffff;
+    }
+
+    #logo {
+        width:75px;
+    }
+
+    #sign-Up-Text {
+        margin-right: 6px;
+        color: rgb(150, 150, 150);
+        /* color:black;
+        font-size: 30px; */
+    }
+
+    #sign-Up-Text:hover {
+        cursor: pointer;
+    }
+
+    #log-In-Text {
+        margin-left: 6px;
+        color: rgb(150, 150, 150);
+    }
+
+    #log-In-Text:hover {
+        cursor: pointer;
+    }
+
+    #Name-Sign-Up {
+        position:absolute;
+        width:70%;
+        padding: 8px 7px;
+        border-radius: 10px;
+        border: none;
+        margin-top: 20px;
+        top: 30px;
+        left:5px;
+        font-size: 18px;
+    }
+
+    #Name-Sign-Up::placeholder {
+        color: rgb(150, 150, 150);
+    }
+
+    #little-Thing-Name {
+        position:absolute;
+        top:78px;
+        left:5px;
+        background:white;
+        width:10px;
+        height:15px;
+        border-bottom-right-radius: 10px;
+    }
+
+    #Password-Sign-Up {
+        position:absolute;
+        width:70%;
+        padding: 8px 7px;
+        border-radius: 10px;
+        border: none;
+        background:#007aff;
+        color: white;
+        margin-top: 20px;
+        top: 85px;
+        left:calc(30% - 5px);
+        font-size: 18px;
+    }
+
+    #Password-Sign-Up::placeholder {
+        color: white;
+    }
+
+    #little-Thing-Password {
+        position:absolute;
+        top:132px;
+        left:calc(100% - 1px);
+        background:#007aff;
+        width:10px;
+        height:15px;
+        border-bottom-left-radius: 10px;
+    }
+
+    #sign-Up-Button {
+        position:absolute;
+        left:50%;
+        top:calc(100vh - 300px);
+        width:150px;
+        transform: translate(-50%);
+        padding: 8px 10px;
+        border-radius: 10px;
+        border: none;
+        background:#007aff;
+        color: white;
+        margin-top: 20px;
+        font-size: 18px;
+    }
+
+    #error {
+        color: red;
+        font-size: 13px;
+        position:absolute;
+        top:145px;
+        left:calc(100% - 180px);
+        display: none;
+    }
+
+    #error1 {
+        color: red;
+        font-size: 13px;
+        position:absolute;
+        top:145px;
+        left:calc(100% - 115px);
+        display:none;
+    }
+}
+
+
+
+
+
+
+@media (min-width:500px) {
+    body {
+        margin: 0px;
+        padding: 0px;
+        overflow: hidden;
+        background: rgb(240, 240, 240);
+        width: 100vw;
+        height:100vh;
+        font-family: sans-serif;
+    }
+
+    #hole-Background {
+        position:absolute;
+        width:100vw;
+        height:100vh;
+        background:rgb(240, 240, 240);
+    }
+
+    #all-Of-Sign-In {
+        display: flex;
+    }
+
+    #all-Of-Log-In {
+        display:none;
+    }
+
+    #signUpOrLogInText {
+        width:1000px;
+        top:115px;
+        left:95px;
+        display: flex;
+        position:absolute;
+    }
+
+    #sign-Up-Container {
+        width:75vw;
+        max-height: 500px;
+        height:calc(100vh - 50px);
+        font-size: 25px;
+        color: rgb(150, 150, 150);
+        position: relative;
+        top:50%;
+        transform: translate(0, -50%);
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 350px;
+        background:rgb(230, 230, 230);
+        border-right: 15px solid rgb(230, 230, 230);
+        border-radius: 20px;
+    }
+
+    #image-Holder {
+        width:75px;
+        position:absolute;
+        height:75px;
+        top:20px;
+        left:50%;
+        transform: translate(-50%);
+        overflow: hidden;
+        border-radius: 100%;
+    }
+
+    #selected-Up-In {
+        width:100px;
+        height:35px;
+        border-radius: 15px;
+        position:absolute;
+        top:113px;
+        left:89px;
+        background:#ffffff;
+    }
+
+    #logo {
+        width:75px;
+    }
+
+    #sign-Up-Text {
+        margin-right: 6px;
+        color: rgb(150, 150, 150);
+    }
+
+    #sign-Up-Text:hover {
+        cursor: pointer;
+    }
+
+    #log-In-Text {
+        margin-left: 6px;
+        color: rgb(150, 150, 150);
+    }
+
+    #log-In-Text:hover {
+        cursor: pointer;
+    }
+
+    #Name-Sign-Up {
+        position:absolute;
+        width:70%;
+        padding: 8px 7px;
+        border-radius: 10px;
+        border: none;
+        margin-top: 20px;
+        top:145px;
+        left:5px;
+        font-size: 18px;
+    }
+
+    #Name-Sign-Up::placeholder {
+        color: rgb(150, 150, 150);
+    }
+
+    #little-Thing-Name {
+        position:absolute;
+        top:193px;
+        left:5px;
+        background:white;
+        width:10px;
+        height:15px;
+        border-bottom-right-radius: 10px;
+    }
+
+    #Password-Sign-Up {
+        position:absolute;
+        width:70%;
+        padding: 8px 7px;
+        border-radius: 10px;
+        border: none;
+        background:#007aff;
+        color: white;
+        margin-top: 20px;
+        top: 200px;
+        left:calc(30% - 5px);
+        font-size: 18px;
+    }
+
+    #Password-Sign-Up::placeholder {
+        color: white;
+    }
+
+    #little-Thing-Password {
+        position:absolute;
+        top:247px;
+        left:calc(100% - 1px);
+        background:#007aff;
+        width:10px;
+        height:15px;
+        border-bottom-left-radius: 10px;
+    }
+
+    #sign-Up-Button {
+        position:absolute;
+        left:50%;
+        top:calc(100% - 125px);
+        width:150px;
+        transform: translate(-50%);
+        padding: 8px 10px;
+        border-radius: 10px;
+        border: none;
+        background:#007aff;
+        color: white;
+        margin-top: 20px;
+        font-size: 18px;
+    }
+
+    #error {
+        color: red;
+        font-size: 13px;
+        position:absolute;
+        top:260px;
+        left:calc(100% - 183px);
+        display: none;
+    }
+
+    #error1 {
+        color: red;
+        font-size: 13px;
+        position:absolute;
+        top:258px;
+        left:calc(100% - 100px);
+        display:none;
+    } 
+}
+
+
+
+
+
+
+
+input:focus, textarea:focus, select:focus{
+    outline: none;
+}

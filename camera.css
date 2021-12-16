@@ -1,0 +1,133 @@
+@media (max-width:499px) {
+    body {
+        background:black;
+        margin: 0px;
+        padding: 0px;
+    }
+    
+    #top-Bar {
+        width:100vw;
+        height:70px;
+        position: fixed;
+        top: 0;
+        z-index: 10000000;
+        background:rgb(240, 240, 240, 0.3);
+        backdrop-filter: blur(1rem);
+    }
+    
+    #logo-Holder {
+        width:60px;
+        height:60px;
+        position:absolute;
+        top:50%;
+        left:50%;
+        transform: translate(-50%, -50%);
+        border-radius: 100%;
+        box-shadow: 2px 2px 15px 1px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+    }
+    
+    #logo {
+        width:60px;
+        background:#007aff;
+    }
+
+    #camera {
+        width:100vw;
+        height:100vh;
+        overflow: hidden;
+        position:absolute;
+        top:0px;
+    }
+
+    #video-Holder {
+        width:calc(100vw + 1000px);
+        height:100vh;
+        /* position:absolute; */
+        margin-top:0px;
+        margin-left:calc(-50vw - 150px);
+    }
+
+    #video {
+        margin-left: auto;
+        margin-right: auto;
+        height:100vh;
+    }
+
+    #bottom-Bar {
+        width:100vw;
+        height:70px;
+        position: fixed;
+        bottom: 0;
+        z-index: 10000000;
+        background:rgb(240, 240, 240, 0.1);
+        backdrop-filter: blur(1rem);
+    }
+
+    #start-button {
+        width:60px;
+        height:60px;
+        border: none;
+        border-radius: 100%;
+        background:transparent;
+        border: 6px solid rgb(255, 255, 255);
+        position:absolute;
+        top:50%;
+        left:50%;
+        transform: translate(-50%, -50%);
+    }
+    
+    #retake-Button {
+        position:absolute;
+        background:#007aff;
+        top:50%;
+        left:5px;
+        padding: 10px;
+        border-radius: 15px;
+        border: none;
+        border: 1px solid rgb(41, 41, 41);
+        transform: translate(0px, -50%);
+    }
+
+    #send-Button {
+        position:absolute;
+        background:#007aff;
+        left:calc(100vw - 58px);
+        padding: 10px;
+        border-radius: 15px;
+        border: none;
+        border: 1px solid rgb(41, 41, 41);
+        top:50%;
+        transform: translate(0px, -50%);
+    }
+
+    #img-Holder {
+        width:100vw;
+        height:100vh;
+        overflow: hidden;
+        position:absolute;
+        top:0px;
+    }
+
+    #photo {
+        height:100vh;
+        margin-left: -230px;
+    }
+
+    #Photo-Spot {
+        width:100vw;
+        height:100vh;
+        position:fixed;
+        top:0px;
+    }
+
+    @keyframes closeCamera {
+        0% {
+            top:0px;
+        }
+
+        100% {
+            top:100vh;
+        }
+    }
+}

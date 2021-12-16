@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="TextIt.jpg">
+    <title>Text It - Chat</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <script defer src="app.js"></script>
+    <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5408554045419850"
+    crossorigin="anonymous"></script> -->
+
+    <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-database.js"></script>
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+          apiKey: "AIzaSyCI5ZNumzP32DT_AA5EI1fF8J3DoM_VgY8",
+          authDomain: "text-it-wtcs.firebaseapp.com",
+          projectId: "text-it-wtcs",
+          storageBucket: "text-it-wtcs.appspot.com",
+          messagingSenderId: "185965497550",
+          appId: "1:185965497550:web:339b438a78ab825dc5d49f",
+          measurementId: "${config.measurementId}"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+
+</head>
+
+<body>
+    <div id="hole-Background">
+        <div id="top-Bar">
+            <div id="logo-Holder">
+                <img src="TextIt.jpg" id="logo">
+            </div>
+            <button id="log-Out">Log Out</button>
+        </div>
+        <!-- <div id="welcome"></div> -->
+            <div id="chatbox">
+                <ul id="messages">
+                    <div id='be-First-Today'>Be First To Text It Today</div>
+                </ul>
+            </div>
+            <form id="submit-Form" onsubmit="return sendMessage();">
+                <div id="input-Contianer">
+                    <input type="text" id="message" class="usermsg" size="63" placeholder="Text It Here" autocomplete="on" />
+                    <button type="submit" id="button">Send</button>
+                </div>
+                <button id="photo-Button" onclick="openCamera()"><img id="photo-Icon" src="data:image/png;base64,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"></button>
+            </form>
+        </div>
+        <div id="Please-Type-Something-Error">
+            <div id="Type-Error-Text">Please Type Something</div>
+            <div id="chat-Message-Icon"><img id="chat-Message-Img" src="data:image/png;base64,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"></div>
+        </div>
+        <div id="anim-Open-Camera"></div>
+    </div>
+    <a href="https://icons8.com/icon/118375/no-chat-message">No Chat Message icon by Icons8</a>
+    <a href="https://icons8.com/icon/59749/camera">Camera icon by Icons8</a>
+    <a href="https://icons8.com/icon/5376/camera">Camera icon by Icons8</a>
+</body>
+<script>
+    // listen for incoming messages
+    var chatMessageCount = 0;
+    firebase.database().ref("messages").on("child_added", function (snapshot) {
+        var html = "";
+        // give each message a unique ID
+        // show delete button if message is sent by me
+        if(snapshot.val().messageType == "message") {
+            if (snapshot.val().sender == myName) {
+                html += "<div id='messages-Chat-Message'>";
+                html += '<div id="messsage-Chat-Message-InnerHTML">';
+                html += snapshot.val().message;
+                html += "<div id='time-Stamp'>";
+                html += snapshot.val().timeStamp
+                html += "</div>"
+                html += "</div>";
+                html += "</div>";
+            } else {
+                html += "<div id='other-Messages-Chat-Message'>";
+                html += '<div id="other-Messsage-Chat-Message-InnerHTML">';
+                html += snapshot.val().sender + ": " + snapshot.val().message;
+                html += "<div id='other-time-Stamp'>";
+                html += snapshot.val().timeStamp;
+                html += "</div>";
+                html += "</div>";
+                html += "</div>";
+            }
+        } else if(snapshot.val().messageType == "image") {
+            if (snapshot.val().sender == myName) {
+                html += "<div id='images-Chat-Img'>";
+                html += '<div id="images-Chat-Img-Holder">';
+                html += "<img src=" + snapshot.val().imageLink +  " id='image-Chat-Img-Link>'";
+                html += "</div>";
+                html += "</div>";
+                html += "<div id='img-Time-Stamp'>";
+                html += snapshot.val().timeStamp
+                html += "</div>"
+            } else {
+                html += "<div id='other-images-Chat-Img'>";
+                html += '<div id="other-images-Chat-Img-Holder">';
+                html += "<img src=" + snapshot.val().imageLink +  " id='other-Image-Chat-Img-Link>'";
+                html += "</div>";
+                html += "</div>";
+                html += "<div id='other-Img-Time-Stamp'>";
+                html += snapshot.val().timeStamp
+                html += "</div>"
+            }
+        }
+        chatMessageCount++;
+        document.getElementById("messages").innerHTML += html;
+        const chatbox = document.getElementById("chatbox")
+        chatbox.scrollTo({ top: 9999999999999, behavior: 'auto' });
+    });
+
+    setInterval(function() {
+        if(chatMessageCount == 0) {
+                document.getElementById('be-First-Today').style.display = "flex";
+            } 
+            if(chatMessageCount > 0) {
+                document.getElementById('be-First-Today').style.display = "none";
+        }
+    }, 10)
+</script>
+</html>

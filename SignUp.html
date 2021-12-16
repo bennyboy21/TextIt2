@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="SignUp.css">
+    <script defer src="SignUp.js"></script>
+    <link rel="icon" href="TextIt.jpg">
+    <link rel="apple-touch-icon" href="TextIt.jpg">
+    <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-database.js"></script>
+    <title>Text It - Sign Up</title>
+
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyCI5ZNumzP32DT_AA5EI1fF8J3DoM_VgY8",
+            authDomain: "text-it-wtcs.firebaseapp.com",
+            projectId: "text-it-wtcs",
+            storageBucket: "text-it-wtcs.appspot.com",
+            messagingSenderId: "185965497550",
+            appId: "1:185965497550:web:339b438a78ab825dc5d49f",
+            measurementId: "${config.measurementId}"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+</head>
+<body>
+    <div id="hole-Background">
+        <div id="sign-Up-Container">
+            <div id="image-Holder">
+                <img id="logo" src="TextIt.jpg">
+            </div>
+            <div id="selected-Up-In"></div>
+            <div id="signUpOrLogInText"><div id="sign-Up-Text">Sign Up</div> | <div id="log-In-Text">Log In</div></div>
+            <div id="error">Please Fill Out Required Fileds</div>
+            <div id="error1">User Already Exists</div>
+            
+            <div id="all-Of-Sign-Up">
+                <form id="sign-Up-Form" onsubmit="return signUp();">
+                    <input type="text" id="Name-Sign-Up" placeholder="Nickname:">
+                    <div id="little-Thing-Name"></div>
+                    <input type="password" id="Password-Sign-Up" placeholder="Password:">
+                    <div id="little-Thing-Password"></div>
+                    <button type="submit" id="sign-Up-Button">Sign Up</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

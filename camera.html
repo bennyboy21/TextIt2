@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="TextIt.jpg">
+    <script defer src="camera.js"></script>
+    <link rel="stylesheet" href="camera.css">
+    <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-database.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="hole-Background">
+        <div id="top-Bar">
+            <div id="logo-Holder">
+                <img src="TextIt.jpg" id="logo">
+            </div>
+            <!-- <button id="log-Out">Log Out</button> -->
+        </div>
+        <div id="Photo-Spot">
+            <div class="camera">
+                <div id="video-Holder">
+                    <video id="video"></video>
+                </div>
+            </div>
+            <canvas id="canvas">
+            </canvas>
+            <div id="img-Holder">
+                <img id="photo" alt="The screen capture will appear in this box.">
+            </div>
+        </div>
+        <div id="bottom-Bar">
+            <button id="start-button"></button>
+            <button id="send-Button">Send</button>
+            <button id="retake-Button">Redo</button>
+        </div>
+    </div>
+</body>
+</html>
